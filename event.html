@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function init() {
+
+        }
+        function changeH1Red() {
+            document.querySelector("#h1c").style.background = "red";
+        }
+        function changeH1Green() {
+            document.querySelector("#h1c").style.background = "green";
+        }
+        function changeH1Blue() {
+            document.querySelector("#h1c").style.background = "blue";
+        }
+        function changeFrontColor() {
+            document.querySelector("#h1id").style.color = document.querySelector("#text_id").value;
+        }
+    </script>
+</head>
+
+<body onload="init()">
+    <h1 id="h1c">choose color you like</h1>
+    <button onclick="changeH1Green()">green</button>
+    <button onclick="changeH1Blue()">blue</button>
+    <button onclick="changeH1Red()">red</button>
+
+
+    <h1 id="h1id">enret coloe</h1>
+    <input type="text" id="text_id" oninput="changeFrontColor()">
+    <button>changeColor</button>
+</body>
+
+</html>

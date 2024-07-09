@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function init() {
+            changeFrontColor() 
+        }
+        function changeColor() {
+            document.querySelector("#h1c").style.background = "red";
+        }
+        function changeFrontColor() {
+            document.querySelector("#h1c").style.color = document.querySelector("#id_select").value;
+        }
+    </script>
+</head>
+
+<body onload="init()">
+    <h1 id="h1c">choose color you like</h1>
+    <select id="id_select" onchange="changeFrontColor()">
+        <option value="red">אדום</option>
+        <option value="blue">כחול</option>
+        <option value="yellow">צהב</option>
+
+    </select>
+</body>
+
+</html>

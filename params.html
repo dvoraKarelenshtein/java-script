@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        window.onload = function () {
+            minus(2, 7);
+            changText("#id_h2a", "hello", "aqua");
+            changText("#id_h2b", "see", "green");
+            changText("#id_h2c", "bee", "red");
+            creatAllState()
+            for (let i = 0; i < 1000; i += 100) {
+                document.body.innerHTML += `<img src="imege/picoc.jpg" Width="${i}" alt="טווס"><br>`;
+                
+            }
+
+        }
+        function creatAllState() {
+            AddState("israel", "10m", 1948, "fly.jpg");
+            AddState("israel", "90m", 1948, "see.jpg");
+            AddState("israel", "10m", 1948, "fly.jpg");
+
+
+        }
+        function AddState(_name, _pop, _year, _img) {
+            document.body.innerHTML += `<h2>${_name}</h2>`
+            document.body.innerHTML += `<div>${_pop}</div>`
+            document.body.innerHTML += `<div>${_year}</div>`
+            document.body.innerHTML += `<img src="imege/${_img}" Width=100" alt="${_name}">`
+
+        }
+        function minus(_x, _y) {
+            document.querySelector("#id_h2").innerHTML = _x * _y
+        }
+        function changText(_tag, _txt, _color) {
+            document.querySelector(_tag).innerHTML = _txt;
+            document.querySelector(_tag).style.color = _color;
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <h2 id="id_h2">=</h2>
+
+    <h2 id="id_h2a">=</h2>
+    <h2 id="id_h2b">=</h2>
+    <h2 id="id_h2c">=</h2>
+</body>
+
+</html>

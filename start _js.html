@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function init() {
+            document.getElementById("h2_id").innerHTML = "change";
+            document.getElementById("h2_id").style.color = "green";
+            changeImg();
+        }
+        function changeImg() {
+            document.querySelector("#picter").width = 400;
+        }
+    </script>
+</head>
+
+<body onload="init()">
+    <H1>hello world</H1>
+    <h2 id="h2_id">---</h2>
+    <img id="picter" src="imege/picoc.jpg" width="200" alt="picoc" >
+</body>
+
+</html>

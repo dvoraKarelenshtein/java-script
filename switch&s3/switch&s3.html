@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function onCheckDay() {
+            let day = id_input.value;
+            switch (day) {
+                case "1":
+                    id_span.innerHTML = "ראשון";
+                    break;
+
+                case "2":
+                    id_span.innerHTML = "שני";
+                    break;
+
+                case "3":
+                    id_span.innerHTML = "שלישי";
+                    break;
+
+                default :
+                    id_span.innerHTML = "שבת";
+                    break;
+            }
+        }
+        function onCheckTemp() {
+            let temp = id_input2.value;
+            (temp>28)? id_span2.innerHTML = "hot": id_span2.innerHTML = "cold";
+        }
+
+        
+    </script>
+</head>
+
+<body>
+    <input id="id_input" type="number" oninput="onCheckDay()">
+    <h2>the day is:<span id="id_span"></span></h2>
+
+
+    <input id="id_input2" type="number" oninput="onCheckTemp()">
+    <h2>the day is:<span id="id_span2"></span></h2>
+</body>
+
+</html>
